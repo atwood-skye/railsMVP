@@ -1,0 +1,321 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "normalize";
+/* -------------------------------------------------*/
+/* BASIC SETUP */
+/* -------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* -------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------------*/
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 300%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  -webkit-delay-animation: 9s;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+/* -------------------------------------------------*/
+/* HEADER */
+/* -------------------------------------------------*/
+
+/* Main nav */
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 35px;
+  font-size: 80%;
+  -webkit-animation-delay: .5s;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link, .main-nav li a:visited  {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+  border-bottom: 2px solid #009eaf;
+}
+
+/* Hero Box */
+
+header {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)), url("ocean1.jpg");
+  background-size: cover;
+  height: 700px;
+  background-position: center;
+  background-attachment: fixed;
+  h3 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    -webkit-animation-delay: 1.5s;
+  }
+  h1 {
+    -webkit-animation-delay: 1s;
+  }
+}
+
+.hero-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrowIcon {
+  color: #fff;
+  font-size: 200%;
+  width: 30px;
+  display: block;
+  top: 650px;
+  margin-left: 50%;
+  position: absolute;
+}
+
+.hero-box h1, h3 {
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.hero-box h3:hover, h1:hover {
+  color: #009eaf;
+}
+
+.herobox .herobox-h3 {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+
+/* -------------------------------------------------*/
+/* WELCOME SECTION */
+/* -------------------------------------------------*/
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #009eaf;
+}
+
+.social-box {
+  padding: 30px;
+}
+
+.social-box h2 {
+  position: relative;
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgba(1, 69, 255, 0.5);
+}
+
+.social-box h2:after {
+  content: "We speak social, local, and mobile";
+  position: absolute; left: 0; top: 5px;
+
+  color: rgb(0, 160, 175);
+}
+
+.social-box h3 {
+  color: #095256;
+  font-size: 150%;
+}
+
+
+.social-box span {
+  color: #F8E74C;
+  font-weight: 400;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.welcome1 {
+  @include grid-column(6);
+  margin-top: -20px;
+}
+
+.welcome2 {
+  @include grid-column(6);
+  margin-top: 55px;
+}
+
+/* -------------------------------------------------*/
+/* SERVICES SECTION */
+/* -------------------------------------------------*/
+
+.services-section {
+  h2 {
+    color: #009eaf;
+    text-align: center;
+    font-size: 200%;
+    border-bottom: 1px solid #009eaf;
+    padding: 20px;
+}
+
+  .col1, .col2, .col3 {
+    @include grid-column(4);
+    padding: 10px;
+    box-shadow: 10px 10px 10px #929293;
+    margin-bottom: 100px;
+  }
+  .branding, .social, .design {
+    background-color: rgba(255, 255, 255, 0.65);
+    height: 250px;
+    margin-top: 10px;
+    transition: background-color 0.1s;
+  }
+}
+
+.services-section {
+  .branding:hover, .social:hover, .design:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.services-section {
+  .col1 {
+    background-image: url("office.jpg");
+    background-size: cover;
+    height: 300px;
+  }
+
+  .col2 {
+    background-image: url("mobile.jpg");
+    background-size: cover;
+    height: 300px;
+  }
+
+  .col3 {
+    background-image: url("design.jpg");
+    background-size: cover;
+    height: 300px;
+  }
+  h3 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    color: #009eaf;
+  }
+}
+
+/* -------------------------------------------------*/
+/* PROJECTS SECTION */
+/* -------------------------------------------------*/
+
+.projects-section {
+  color: #009eaf;
+  margin-top: 50px;
+  margin-bottom: 600px;
+}
+
+.projects1 {
+  @include grid-column(4);
+}
+
+.projects2 {
+  @include grid-column(4);
+}
+
+
+/* -------------------------------------------------*/
+/* FORM */
+/* -------------------------------------------------*/
+
+.section-form {
+  background-color: #a9f0fa;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+/* -------------------------------------------------*/
+/* ANIMATIONS */
+/* -------------------------------------------------*/
+
+.js--wp-1, .js--wp-2, .js--wp-3, .js--welcome1, .js--welcome2 {
+  opacity: 0;
+}
+
+.js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated, .js--welcome1.animated, .js--welcome2.animated {
+  opacity: 1;
+}
