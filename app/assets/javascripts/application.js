@@ -63,4 +63,32 @@ $(document).ready(function() {
     offset: '60%'
   });
 
+  var modals='hello';
+  var modalExit = '';
+
+  $('.modal-button').click(function() {
+    console.log(modals)
+    modals = document.getElementsByClassName($(this)[0].id);
+    modals[0].style.display = "block";
+    modalExit = modals[1];
+    console.log(modalExit)
+  });
+
+  $('.close').click(function() {
+    modals[0].style.display = "none";
+  });
+
+
+  // var modal = document.getElementById('projectModal');
+  // var btn = document.getElementById("projectBtn");
+  // var span = document.getElementsByClassName("close")[0];
+  // btn.onclick = function() {
+  //   modal.style.display = "block";
+  // }
+  // window.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     modal.style.display = "none";
+  //   }
+  // }
+
 });

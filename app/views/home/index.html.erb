@@ -33,8 +33,6 @@
   <section class="services-section" id="services">
     <div class="row">
       <h2>Our Services</h2>
-    </div>
-    <div class="row">
       <div class="col1 js--wp-1">
         <div class="branding">
           <h3>Branding and Consulting</h3>
@@ -53,22 +51,71 @@
           <p>Whether your customers are searching for you on their phone during bus rides or at their desks.</p>
         </div>
       </div>
+      <div class="clearfix"><div>
     </div>
   </section>
 
   <section class="projects-section" id="projects">
     <div class="row">
         <h2>Recent Projects</h2>
-        <div class="projects1"><a href="#"><%= image_tag("socialSyn.jpg", size: "300x300") %></a></div>
-        <div class="projects1"><a href="#"><%= image_tag("topVet.jpg", size: "300x300") %></a></div>
-        <div class="projects1"><a href="#"><%= image_tag("bootlegger.jpg", size: "300x300") %></a></div>
-        <div class="projects2"><a href="#"><%= image_tag("wonderland.jpg", size: "300x300") %></a></div>
-        <div class="projects2"><a href="#"><%= image_tag("hair.jpg", size: "300x300") %></a></div>
-        <div class="projects2"><a href="#"><%= image_tag("mla.jpg", size: "300x300") %></a></div>
+        <div class="projects1"><%= image_tag("socialSyn.jpg", size: "300x300") %>
+        <button id="modal-1" class='modal-button'>Social Syndicate</button>
+        <div class="modal-1 projectModal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+      </div>
+
+        <div class="projects1"><a href="#"><%= image_tag("topVet.jpg", size: "300x300") %></a>
+          <button id="modal-2" class='modal-button'>Top Vet</button>
+          <div class="modal-2 projectModal" id="projectModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects1"><a href="#"><%= image_tag("bootlegger.jpg", size: "300x300") %></a>  <button id="modal-3" class="modal-button">Bootlegger</button>
+          <div class="modal-3 projectModal" id="projectModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects2"><a href="#"><%= image_tag("wonderland.jpg", size: "300x300") %></a>  <button id="modal-4" class="modal-button">Wonderland Bar</button>
+          <div class="modal-4 projectModal" id="projectModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects2"><a href="#"><%= image_tag("mla.jpg", size: "300x300") %></a>  <button id="modal-5" class="modal-button">Mobile Leaders Alliance</button>
+          <div class=" modal-5 projectModal" id="projectModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects2"><a href="#"><%= image_tag("hair.jpg", size: "300x300") %></a>  <button id="modal-6" class="modal-button">Hair and Makeup</button>
+          <div class="modal-6 projectModal" id="projectModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
     </div>
   </section>
 
   <section class="section-form clearfix" id="contact">
+    <div class="row">
       <div class="row">
         <h2>Want to work with us? <br>We'd love to hear from you!</h2>
       </div>
@@ -130,4 +177,5 @@
         </div>
         </form>
       </div>
+    </div>
     </section>
