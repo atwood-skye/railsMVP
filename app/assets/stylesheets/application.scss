@@ -79,6 +79,7 @@ h3 {
 .main-nav {
   float: right;
   list-style: none;
+  margin-right: 20px;
   margin-top: 35px;
   font-size: 80%;
   -webkit-animation-delay: .5s;
@@ -87,9 +88,6 @@ h3 {
 .main-nav li {
   display: inline-block;
   margin-left: 40px;
-}
-
-.main-nav li a:link, .main-nav li a:visited  {
   padding: 8px 0;
   color: #fff;
   text-decoration: none;
@@ -99,8 +97,38 @@ h3 {
   transition: border-bottom 0.2s;
 }
 
-.main-nav li a:hover, .main-nav li a:active {
+.main-nav li:hover, .main-nav li:active {
+  cursor: pointer;
   border-bottom: 2px solid #009eaf;
+}
+
+/* Sticky Navi */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: #009eaf;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin-top: 18px;
+ }
+
+.sticky .main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.sticky .main-nav li  {
+  padding: 15px 0;
+  color: #009eaf;
 }
 
 /* Hero Box */
@@ -270,11 +298,17 @@ header {
 .projects-section {
   color: #009eaf;
   background-color: #001f23;
+  text-align: center;
+  h2 {
+  font-size: 200%;
+  border-bottom: 1px solid #009eaf;
+  }
 }
 
 .projects-section img {
   width: 350px;
   border: 1px solid #324B4E;
+  transition: translate width 2s;
 }
 
 .projects1, .projects2 {
@@ -305,12 +339,20 @@ header {
 }
 
 .modal-button {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 300;
   background-color: #009eaf;
   border: 2px solid #324B4E;
   border-radius: 7px;
   display: block;
   margin: 5px auto;
   padding: 5px;
+  transition: translate border 1s;
+}
+
+.modal-button:hover, .modal-button:active {
+  border: 2.5px solid rgba(255, 255, 255, 0.5);
 }
 
 .close {
@@ -326,6 +368,14 @@ header {
   cursor: pointer;
 }
 
+.js--wp-projects {
+  opacity: 0;
+}
+
+.js--wp-projects.animated {
+  opacity: 1;
+}
+
 
 /* -------------------------------------------------*/
 /* FORM */
@@ -333,6 +383,23 @@ header {
 
 .section-form {
   background-color: #a9f0fa;
+  color: #001f23;
+  h2 {
+  font-size: 200%;
+  border-bottom: 1px solid #009eaf;
+  }
+  .formBtn {
+    background-color: #001f23;
+    color: #fff;
+    font-weight: 300;
+    border: 2px solid #324B4E;
+    border-radius: 7px;
+    padding: 5px;
+    transition: translate border 2s;
+  }
+  .formBtn:hover, .formBtn:active {
+    border: 4px solid rgba(255, 255, 255, 0.5);
+  }
 }
 
 .contact-form {

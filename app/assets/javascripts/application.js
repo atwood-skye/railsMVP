@@ -18,6 +18,16 @@
 
 $(document).ready(function() {
 
+  $('.js--section-features').waypoint(function(direction) {
+  if (direction == "down") {
+    $('nav').addClass('sticky');
+  } else {
+    $('nav').removeClass('sticky');
+  }
+}, {
+  offset: '60px;'
+});
+
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -63,6 +73,12 @@ $(document).ready(function() {
     offset: '60%'
   });
 
+  $('.js--wp-projects').waypoint(function(direction) {
+    $('.js--wp-projects').addClass('animated bounceInUp');
+  }, {
+    offset: '70%'
+  });
+
   var modals='hello';
   var modalExit = '';
 
@@ -78,17 +94,24 @@ $(document).ready(function() {
     modals[0].style.display = "none";
   });
 
+  $('#serviceBtn').click(function(event) {
+    $('html, body').animate({
+      scrollTop: $('#services').offset().top
+    }, 1500);
+    });
 
-  // var modal = document.getElementById('projectModal');
-  // var btn = document.getElementById("projectBtn");
-  // var span = document.getElementsByClassName("close")[0];
-  // btn.onclick = function() {
-  //   modal.style.display = "block";
-  // }
-  // window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     modal.style.display = "none";
-  //   }
-  // }
+    $('#projectsBtn').click(function(event) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#projects').offset().top
+      }, 1500);
+      });
+
+      $('#contactBtn').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: $('#contact').offset().top
+        }, 1500);
+        });
 
 });
