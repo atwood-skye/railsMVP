@@ -272,9 +272,16 @@ header {
   background-color: #001f23;
 }
 
+.projects-section img {
+  width: 350px;
+  border: 1px solid #324B4E;
+}
+
 .projects1, .projects2 {
   @include grid-column(4);
+  display: block;
   background-size: cover;
+  margin-bottom: 20px;
 }
 
 .projectModal {
@@ -295,6 +302,15 @@ header {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+
+.modal-button {
+  background-color: #009eaf;
+  border: 2px solid #324B4E;
+  border-radius: 7px;
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
 }
 
 .close {
