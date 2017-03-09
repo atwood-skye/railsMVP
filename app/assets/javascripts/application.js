@@ -73,21 +73,19 @@ $(document).ready(function() {
     offset: '60%'
   });
 
-  $('.js--wp-projects').waypoint(function(direction) {
-    $('.js--wp-projects').addClass('animated bounceInUp');
+  $('.js--wp-contact').waypoint(function(direction) {
+    $('.js--wp-contact').addClass('animated bounceInUp');
   }, {
-    offset: '70%'
+    offset: '90%'
   });
 
   var modals='hello';
   var modalExit = '';
 
   $('.modal-button').click(function() {
-    console.log(modals)
     modals = document.getElementsByClassName($(this)[0].id);
     modals[0].style.display = "block";
     modalExit = modals[1];
-    console.log(modalExit)
   });
 
   $('.close').click(function() {

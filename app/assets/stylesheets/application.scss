@@ -424,10 +424,10 @@ input[type=checkbox] {
 /* ANIMATIONS */
 /* -------------------------------------------------*/
 
-.js--wp-1, .js--wp-2, .js--wp-3, .js--welcome1, .js--welcome2 {
+.js--wp-1, .js--wp-2, .js--wp-3, .js--welcome1, .js--welcome2, .js--wp-contact {
   opacity: 0;
 }
 
-.js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated, .js--welcome1.animated, .js--welcome2.animated {
+.js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated, .js--welcome1.animated, .js--welcome2.animated, .js--wp-contact {
   opacity: 1;
 }
