@@ -18,6 +18,11 @@
 
 $(document).ready(function() {
 
+  $('.myFunction').click(function() {
+    console.log("CLICK HO")
+    document.getElementById("dropdownMenu").classList.toggle("show");
+  });
+
   $('.js--section-features').waypoint(function(direction) {
   if (direction == "down") {
     $('nav').addClass('sticky');
@@ -27,6 +32,21 @@ $(document).ready(function() {
 }, {
   offset: '60px;'
 });
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+   var dropdowns = document.getElementsByClassName("dropdown-content");
+   var i;
+   for (i = 0; i < dropdowns.length; i++) {
+     var openDropdown = dropdowns[i];
+     if (openDropdown.classList.contains('show')) {
+       openDropdown.classList.remove('show');
+     }
+   }
+ }
+}
 
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
@@ -92,24 +112,26 @@ $(document).ready(function() {
     modals[0].style.display = "none";
   });
 
-  $('#serviceBtn').click(function(event) {
+  $('.serviceBtn').click(function(event) {
     $('html, body').animate({
-      scrollTop: $('#services').offset().top
+      scrollTop: $('.services-scroll').offset().top
     }, 1500);
     });
 
-    $('#projectsBtn').click(function(event) {
+    $('.projectsBtn').click(function(event) {
       event.preventDefault();
       $('html, body').animate({
-        scrollTop: $('#projects').offset().top
+        scrollTop: $('#slider1').offset().top
       }, 1500);
       });
 
-      $('#contactBtn').click(function(event) {
+      $('.contactBtn').click(function(event) {
         event.preventDefault();
         $('html, body').animate({
           scrollTop: $('#contact').offset().top
         }, 1500);
         });
+
+
 
 });

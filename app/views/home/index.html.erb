@@ -2,11 +2,20 @@
   <nav>
       <div id="row">
         <ul class="main-nav animated fadeIn">
-          <li id="serviceBtn">What we do</li>
-          <li id="projectsBtn">Projects</li>
-          <li id="contactBtn">Get in touch</li>
+          <li class="serviceBtn">What we do</li>
+          <li class="projectsBtn">Projects</li>
+          <li class="contactBtn">Get in touch</li>
         </ul>
-
+        <div class="dropdown">
+          <button class="dropbtn myFunction">Menu</button>
+          <div id="dropdownMenu" class="dropdown-content">
+            <ul>
+              <li class="serviceBtn">About</li>
+              <li class="projectsBtn">Work</li>
+              <li class="contactBtn">Contact</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -18,6 +27,9 @@
     </div>
   </header>
 
+  <br>
+  <br>
+
   <section class="welcome-section js--section-features" id="welcome">
       <div class="social-box">
         <div class="welcome1 js--welcome1">
@@ -28,9 +40,35 @@
           <br>
         </div>
       </div>
+      <div class="clearfix"></div>
   </section>
 
-  <section class="services-section" id="services">
+  <section class="services-section-mobile services-scroll">
+    <div class="social-box">
+      <div class="welcome1 js--welcome1">
+        <h2>We speak social, local, and mobile</h2>
+      </div>
+      <div class="welcome2 js--welcome2">
+        <h3>These are not new languages for us. We were <span class="born">born</span> with them.</h3>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Our Services</h2>
+        <h4>Branding and Consulting</h4>
+          <p>Refresh your currant brand or develop a new one while learning what makes your customers happy and how to better connect with them</p>
+          <br>
+        <h4>Social, Local, and Mobile Marketing</h4>
+          <p>Today's ultra-connected, fast moving world requires a marketing presence and strategy that works in the same way. Let us help you build or improve yours.</p>
+          <br>
+        <h4>Graphic and Web Design</h4>
+          <p>Whether your customers are searching for you on their phone during bus rides or at their desks.</p>
+          <br>
+        <div class="clearfix"></div>
+    </div>
+  </section>
+
+  <section class="services-section services-scroll">
     <div class="row">
       <h2>Our Services</h2>
       <div class="col1 js--wp-1">
@@ -51,66 +89,25 @@
           <p>Whether your customers are searching for you on their phone during bus rides or at their desks.</p>
         </div>
       </div>
-      <div class="clearfix"><div>
+      <div class="clearfix"></div>
     </div>
   </section>
 
-  <section class="projects-section" id="projects">
-    <div class="row">
-        <h2>Recent Projects</h2>
-        <div class="projects1"><%= image_tag("socialSyn.jpg", size: "300x300") %>
-        <button id="modal-1" class='modal-button'>Social Syndicate</button>
-        <div class="modal-1 projectModal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-          </div>
-        </div>
+  <section class="project-slider-section" id="slider1">
+    <h2>Recent Projects</h2>
+    <div class="slider-container">
+      <div class="project-slider">
+        <ul>
+          <li><%= image_tag("Wonderland2.jpg", :class => "style_img") %>
+          <div class="slider-content">Wonderland Bar, Ocean Beach</div></li>
+          <li><%= image_tag("BootleggerNew.jpg", :class => "style_img") %>
+          <div class="slider-content">Bootlegger</div></li>
+          <li><%= image_tag("theLocal.jpg", :class => "style_img") %>
+          <div class="slider-content">The Local</div></li>
+        </ul>
+        <button class="prev">prev</button>
+        <button class="next">next</button>
       </div>
-
-        <div class="projects1"><a href="#"><%= image_tag("topVet.jpg", size: "300x300") %></a>
-          <button id="modal-2" class='modal-button'>Top Vet</button>
-          <div class="modal-2 projectModal" id="projectModal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="projects1"><a href="#"><%= image_tag("bootlegger.jpg", size: "300x300") %></a>  <button id="modal-3" class="modal-button">Bootlegger</button>
-          <div class="modal-3 projectModal" id="projectModal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          </div>
-        </div>
-        <div class="projects2"><a href="#"><%= image_tag("wonderland.jpg", size: "300x300") %></a>  <button id="modal-4" class="modal-button">Wonderland Bar</button>
-          <div class="modal-4 projectModal" id="projectModal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          </div>
-        </div>
-        <div class="projects2"><a href="#"><%= image_tag("mla.jpg", size: "300x300") %></a>  <button id="modal-5" class="modal-button">Mobile Leaders Alliance</button>
-          <div class=" modal-5 projectModal" id="projectModal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          </div>
-        </div>
-        <div class="projects2"><a href="#"><%= image_tag("hair.jpg", size: "300x300") %></a>  <button id="modal-6" class="modal-button">Hair and Makeup</button>
-          <div class="modal-6 projectModal" id="projectModal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
     </div>
   </section>
 
